@@ -1,7 +1,26 @@
-/*
-    home.css: This website contains selectors only used in home.css
-
-    All pages share the styles on index.css but you should create 
-    one more css for each page that will contain the selected used 
-    on that page only (the ones not reused in other pages).
-*/
+body{
+    background-color: black;
+}
+h1{
+    color: white;
+    font-size: 60px;
+}
+.card{
+    background-color: #06002e;
+    width: 335px;
+    height: 535px;
+}
+h2,p{
+    color: white;
+}
+p{
+    outline-color: white;
+}
+p{
+    outline-style: solid;
+}
+.card2{
+    background-color: #06002e;
+    width: 335px;
+    height: 535px; 
+}

@@ -9,7 +9,7 @@ import { Single } from "./pages/single";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
-import { Footer } from "./component/footer";
+// import { Footer } from "./component/footer";
 import Guest from "./pages/Guest";
 import Host from "./pages/Host";
 
@@ -34,7 +34,7 @@ const Layout = () => {
                         <Route element={<Guest />} path="/Guest" />
                         <Route element={<h1>Not found!</h1>} />
                     </Routes>
-                    <Footer />
+                    {/* <Footer /> */}
                 </ScrollToTop>
             </BrowserRouter>
         </div>
