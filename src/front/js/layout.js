@@ -8,7 +8,6 @@ import { Demo } from "./pages/demo";
 import { Single } from "./pages/single";
 import injectContext from "./store/appContext";
 
-import { Navbar } from "./component/navbar";
 // import { Footer } from "./component/footer";
 import Guest from "./pages/Guest";
 import Host from "./pages/Host";
@@ -24,8 +23,7 @@ const Layout = () => {
     return (
         <div>
             <BrowserRouter basename={basename}>
-                <ScrollToTop>
-                    <Navbar />
+                <ScrollToTop>                
                     <Routes>
                         <Route element={<Home />} path="/" />
                         <Route element={<Demo />} path="/demo" />
