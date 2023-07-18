@@ -6,7 +6,7 @@ h1{
     color: white;
     font-size: 60px;
 }
-.Queue{
+.Queue,.rewards{
     background-color: #06002e;
     width: 335px;
     height: 535px;

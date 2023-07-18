@@ -88,13 +88,13 @@ export const Home = () => {
           type="button"
           class="btn btn-primary"
           data-bs-toggle="modal"
-          data-bs-target="#exampleModal"
+          data-bs-target="#exampleModal1"
         >
           Log In
         </button>
         <div
           class="modal fade"
-          id="exampleModal"
+          id="exampleModal1"
           tabindex="-1"
           aria-labelledby="exampleModalLabel"
           aria-hidden="true"

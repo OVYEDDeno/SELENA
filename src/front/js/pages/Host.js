@@ -1,22 +1,11 @@
-import React from 'react'
+import React, { useContext } from "react";
 
 export default function Host() {
-  return (
-    <div>Host</div>
-  )
-}
-import React, { useContext } from "react";
-import { Context } from "../store/appContext";
-import "../../styles/home.css";
-
-export const Home = () => {
-  const { store, actions } = useContext(Context);
-
   return (
     <div className="mt-5">
       <div class="d-flex justify-content-end">
         <button type="button" class="btn btn-dark">
-          Quietly Leave
+          Disconnect
         </button>
       </div>
       <h1>Welcome, Person_id!</h1>
@@ -29,8 +18,8 @@ export const Home = () => {
           <h2>California Breeze - Lil Baby</h2>
         </div>
         <div class="col-4">
-          <div class="Queue">
-            <h2>Queue</h2>
+          <div class="rewards">
+            <h2>Your Rewards</h2>
             <p class="solid">Lil Top - NBA YoungBoy</p>
             <p class="solid">712PM - Future</p>
             <p class="solid">Dead Trollz - NBA YoungBoy</p>
