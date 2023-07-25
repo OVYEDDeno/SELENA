@@ -8,12 +8,7 @@ export const Home = () => {
 
   return (
     <div className="mt-5">
-      <div class="d-flex justify-content-end">
-        <button type="button" class="btn btn-dark">
-          Quietly Leave
-        </button>
-      </div>
-      <h1>Welcome, Person_id!</h1>
+      <h1>Welcome, No Name!</h1>
       <div class="row justify-content-center d-flex">
         <div class="col">
           <div class="LissaJous">
@@ -55,7 +50,7 @@ export const Home = () => {
                           type="text"
                           class="form-control"
                           id="formControlInput1"
-                          placeholder="name"
+                          placeholder="Name Of Song"
                         />
                       </div>
                       <button
@@ -153,7 +148,7 @@ export const Home = () => {
         </div>
       </div>
       <center>
-        <h5>To Create Your Own Room For FREE</h5>
+        <h5>Create Your Own Room For FREE</h5>
       </center>
     </div>
   );
