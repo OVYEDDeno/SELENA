@@ -3,6 +3,60 @@ import React, { useContext } from "react";
 export default function Host() {
   return (
     <div className="mt-5">
+      <div class="d-flex justify-content-end">              
+              <button
+                type="button"
+                class="btn btn-dark"
+                data-bs-toggle="modal"
+                data-bs-target="#profileModal"
+              >
+                Edit Profile
+              </button>
+              <div
+                class="modal fade"
+                id="profileModal"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      <div class="mb-3">
+                        <label for="formControlInput1" class="form-label">
+                          Name
+                        </label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="formControlInput2"
+                          placeholder="Name"
+                        />
+                      </div>
+                      <div class="mb-3">
+                        <label for="formControlInput1" class="form-label">
+                          City and State
+                        </label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="formControlInput2"
+                          placeholder="Miami, FL"
+                        />
+                      </div>
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Save
+                      </button>
+                    </div>
+                    {/* REMEMBER TO FIX CLOSE BUTTON TO FIX REQUEST FUCTION ON BACK END */}
+                  </div>
+                </div>
+              </div>
+            </div>
       <h1>Welcome, Person_id!</h1>
       <div class="row justify-content-center d-flex">
         <div class="col">
@@ -18,9 +72,7 @@ export default function Host() {
             <h5 class="solid">Balance: $5050</h5>
             <h5 class="solid">Amount Earned: $5000</h5>
             <h5 class="solid">Staked: $50</h5>
-            <div class="d-flex justify-content-end">
-              {" "}
-              */}
+            <div class="d-flex justify-content-end">              
               <button
                 type="button"
                 class="btn btn-primary"
@@ -72,7 +124,7 @@ export default function Host() {
             <h5 class="solid">Nostalgia | 51</h5>
             <h5 class="solid">Glamorous | 34</h5>
             <h5 class="solid">Heaven | 17</h5>
-            <div class="d-flex justify-content-end">
+            <div class="d-flex justify-content-end mb-3">
               <button
                 type="button"
                 class="btn btn-primary"
@@ -114,7 +166,8 @@ export default function Host() {
                   </div>
                 </div>
               </div>
-            </div>$spacer
+            </div>
+            <div></div>
             <div class="d-flex justify-content-end"><input
               class="form-control"
               type="search"

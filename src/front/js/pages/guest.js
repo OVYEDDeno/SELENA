@@ -4,7 +4,7 @@ export default function Guest() {
   return (
     <div className="mt-5">
       <div class="d-flex justify-content-end">
-        <button type="button" class="btn btn-dark">
+        <button href="https://3000-aqua-constrictor-ck9kg7pshi1.ws-us102.gitpod.io/" type="button" class="btn btn-dark">
           Quietly Leave
         </button>
       </div>

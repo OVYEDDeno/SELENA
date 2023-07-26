@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import { Context } from "../store/appContext";
-import rigoImageUrl from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
 
 export const Home = () => {
@@ -9,6 +8,11 @@ export const Home = () => {
   return (
     <div className="mt-5">
       <h1>Welcome, No Name!</h1>
+      {/* START IN A RANDOM BUT MOST POPULAR REGIONS WITHIN A Formal/Functional/Vernacular 
+      https://helpfulprofessor.com/types-of-regions/
+      FORMAL: https://helpfulprofessor.com/formal-region-examples/
+      FUNCTIONAL: https://helpfulprofessor.com/functional-region-examples/ 
+      VERNACULAR: https://helpfulprofessor.com/perceptual-region-examples/*/}
       <div class="row justify-content-center d-flex">
         <div class="col">
           <div class="LissaJous">
@@ -28,40 +32,69 @@ export const Home = () => {
                 type="button"
                 class="btn btn-primary"
                 data-bs-toggle="modal"
-                data-bs-target="#exampleModal"
+                data-bs-target="#exampleModal1"
               >
                 Add To Muse
               </button>
               <div
                 class="modal fade"
-                id="exampleModal"
+                id="exampleModal1"
                 tabindex="-1"
                 aria-labelledby="exampleModalLabel"
                 aria-hidden="true"
               >
                 <div class="modal-dialog">
                   <div class="modal-content">
+                    <div class="modal-header">
+                      <h4 class="modal-title" id="exampleModalLabel">
+                        SELENA
+                      </h4>
+
+                      <div class="d-flex justify-content-center">
+                        <button type="button" class="btn btn-dark">
+                          Connect Your Wallet
+                        </button>
+                      </div>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
                     <div class="modal-body">
                       <div class="mb-3">
                         <label for="formControlInput1" class="form-label">
-                          Request A Song
+                          Name
                         </label>
                         <input
                           type="text"
                           class="form-control"
                           id="formControlInput1"
-                          placeholder="Name Of Song"
+                          placeholder="Name"
                         />
                       </div>
+                      <div class="mb-3">
+                        <label for="formControlInput2" class="form-label">
+                          Room Pin
+                        </label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="formControlInput2"
+                          placeholder="0000"
+                        />
+                      </div>
+                    </div>
+                    <div class="modal-footer">
                       <button
                         type="button"
                         class="btn btn-secondary"
                         data-bs-dismiss="modal"
                       >
-                        Request
+                        Close
                       </button>
                     </div>
-                    {/* REMEMBER TO FIX CLOSE BUTTON TO FIX REQUEST FUCTION ON BACK END */}
                   </div>
                 </div>
               </div>
@@ -87,65 +120,6 @@ export const Home = () => {
         >
           Log In
         </button>
-        <div
-          class="modal fade"
-          id="exampleModal1"
-          tabindex="-1"
-          aria-labelledby="exampleModalLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h4 class="modal-title" id="exampleModalLabel">
-                  SELENA
-                </h4>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div class="modal-body">
-                <div class="mb-3">
-                  <label for="formControlInput1" class="form-label">
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="formControlInput1"
-                    placeholder="name"
-                  />
-                </div>
-                <div class="mb-3">
-                  <label for="formControlInput2" class="form-label">
-                    Room Pin
-                  </label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="formControlInput2"
-                    placeholder="0000"
-                  />
-                </div>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-dark">
-                  Connect Your Wallet
-                </button>
-                <button
-                  type="button"
-                  class="btn btn-secondary"
-                  data-bs-dismiss="modal"
-                >
-                  Close
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
       <center>
         <h5>Create Your Own Room For FREE</h5>
