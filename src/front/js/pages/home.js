@@ -12,7 +12,8 @@ export const Home = () => {
       https://helpfulprofessor.com/types-of-regions/
       FORMAL: https://helpfulprofessor.com/formal-region-examples/
       FUNCTIONAL: https://helpfulprofessor.com/functional-region-examples/ 
-      VERNACULAR: https://helpfulprofessor.com/perceptual-region-examples/*/}
+      VERNACULAR: https://helpfulprofessor.com/perceptual-region-examples/
+      Room pin are for private rooms and an easy way to aalso find a room*/}
       <div class="row justify-content-center d-flex">
         <div class="col">
           <div class="LissaJous">
