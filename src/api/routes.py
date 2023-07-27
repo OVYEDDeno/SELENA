@@ -2,7 +2,7 @@
 This module takes care of starting the API Server, Loading the DB and Adding the endpoints
 """
 from flask import Flask, request, jsonify, url_for, Blueprint
-from api.models import db, User, Guest
+from api.models import db, User, room
 from api.utils import generate_sitemap, APIException
 
 api = Blueprint('api', __name__)
@@ -18,24 +18,24 @@ def handle_hello():
     return jsonify(response_body), 200
 
 
-@api.route('/guest', methods=['POST'])
-def handle_guest():
+@api.route('/room', methods=['POST'])
+def handle_room():
     body=request.get_json()
-    guest=Guest(Name=body['Name'], Room_pin=body['Room_pin'])
-    db.session.add(guest)
+    room=room(Name=body['Name'], Room_pin=body['Room_pin'])
+    db.session.add(room)
     db.session.commit()
-    query_guest=Guest.query.all()
-    all_guests = list(map(lambda x: x.serialize(), query_guest))
+    query_room=room.query.all()
+    all_rooms = list(map(lambda x: x.serialize(), query_room))
 
-    return jsonify(all_guests), 200
+    return jsonify(all_rooms), 200
 
 @api.route('/host', methods=['POST'])
 def handle_host():
     body=request.get_json()
-    host=Guest(Name=body['Name'], Room_pin=body['Room_pin'])
+    host=room(Name=body['Name'], Room_pin=body['Room_pin'])
     db.session.add(host)
     db.session.commit()
-    query_host=Guest.query.all()
+    query_host=room.query.all()
     all_hosts = list(map(lambda x: x.serialize(), query_host))
 
     return jsonify(all_hosts), 200

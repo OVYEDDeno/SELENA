@@ -72,10 +72,14 @@ export default function Guest() {
           <div class="Room">
             <h2>Room Name</h2>
             <h2> # of People In Room</h2>
-            <p class="solid">Lil Top - NBA YoungBoy</p>
-            <p class="solid">712PM - Future</p>
-            <p class="solid">Dead Trollz - NBA YoungBoy</p>
-          </div>
+            <p class="solid">OVYED Deno | Tiktok/IG/Twitter</p>
+            <p class="solid">Future</p>
+            <p class="solid">NBA YoungBoy</p>
+            <div class="d-flex justify-content-end mb-3">
+            <button class="btn btn-primary mt-3" type="submit">
+              Share This Room
+            </button></div>
+          </div>          
         </div>
       </div>
     </div>

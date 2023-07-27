@@ -167,7 +167,6 @@ export default function Host() {
                 </div>
               </div>
             </div>
-            <div></div>
             <div class="d-flex justify-content-end"><input
               class="form-control"
               type="search"
@@ -177,6 +176,10 @@ export default function Host() {
             />
             <button class="btn btn-primary" type="submit">
               Search
+            </button></div>
+            <div class="d-flex justify-content-end mb-3">
+            <button class="btn btn-primary mt-3" type="submit">
+              Invite Friend
             </button></div>
           </div>
         </div>
