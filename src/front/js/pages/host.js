@@ -185,14 +185,14 @@ export default function Host() {
         </div>
       </div>
       <div class="d-flex justify-content-center">
-        <button
-          type="button"
+        <a
           class="btn btn-primary"
-          data-bs-toggle="modal"
-          data-bs-target="#exampleModal1"
+          // data-bs-toggle="modal"
+          // data-bs-target="#exampleModal1"
+          href="https://3000-aqua-constrictor-ck9kg7pshi1.ws-us102.gitpod.io"
         >
           Disconnect
-        </button>
+        </a>
       </div>
     </div>
   );

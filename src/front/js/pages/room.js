@@ -4,9 +4,9 @@ export default function Guest() {
   return (
     <div className="mt-5">
       <div class="d-flex justify-content-end">
-        <button href="https://3000-aqua-constrictor-ck9kg7pshi1.ws-us102.gitpod.io/" type="button" class="btn btn-dark">
+        <a href="https://3000-aqua-constrictor-ck9kg7pshi1.ws-us102.gitpod.io/" type="button" class="btn btn-dark">
           Quietly Leave
-        </button>
+        </a>
       </div>
       <h1>Welcome, Person_id!</h1>
       <div class="row justify-content-center d-flex">
