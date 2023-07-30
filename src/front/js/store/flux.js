@@ -1,3 +1,6 @@
+import { BackendURL } from "../component/backendURL";
+import Host from "../pages/host";
+
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
@@ -14,9 +17,20 @@ const getState = ({ getStore, getActions, setStore }) => {
 					background: "white",
 					initial: "white"
 				}
-			]
+			],
+			BackendURL : process.env.BACKEND_URL,
+			Room: {}
 		},
 		actions: {
+			createRoom: async()=>{
+				const opts={
+					method:"POST",
+					headers:{"Content-Type":"application/json"},
+					body:JSON.stringify({Host:Host, Name:Name, Room_pin:Room_pin, uuid:uuid}),
+				}
+				const result=await fetch(BackendURL+"/api/room", opts)
+					const data=await result.json()
+							setStore({Room:data.Room,room_uuid:data.Room.uuid})},
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");

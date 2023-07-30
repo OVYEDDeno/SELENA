@@ -1,6 +1,9 @@
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
+import { Context } from "../store/appContext";
 
 export default function Host() {
+
   return (
     <div className="mt-5">
       <div class="d-flex justify-content-end">              
@@ -125,14 +128,16 @@ export default function Host() {
             <h5 class="solid">Glamorous | 34</h5>
             <h5 class="solid">Heaven | 17</h5>
             <div class="d-flex justify-content-end mb-3">
-              <button
-                type="button"
+              <Link
+              to={"/room/"+store.room_uuid}
+              onClick={actions.createRoom}
+                type="1"
                 class="btn btn-primary"
                 data-bs-toggle="modal"
                 data-bs-target="#createARoom"
               >
                 Create A Room
-              </button>
+              </Link>
               <div
                 class="modal fade"
                 id="createARoom"
