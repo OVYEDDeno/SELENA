@@ -9,6 +9,7 @@ import injectContext from "./store/appContext";
 // import { Footer } from "./component/footer";
 import Host from "./pages/host";
 import Room from "./pages/room";
+import Test from "./pages/test";
 
 //create your first component
 const Layout = () => {
@@ -26,6 +27,7 @@ const Layout = () => {
                         <Route element={<Home />} path="/" />
                         <Route element={<Host />} path="/host/:theid" />
                         <Route element={<Room />} path="/room/:theid" />
+                        <Route element={<Test />} path="/test" />
                         <Route element={<h1>Not found!</h1>} />
                     </Routes>
                     {/* <Footer /> */}

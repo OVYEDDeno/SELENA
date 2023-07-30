@@ -1,27 +1,26 @@
 from flask_sqlalchemy import SQLAlchemy
-
+import uuid
 db = SQLAlchemy()
 
-class User(db.Model):
+class Users(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    email = db.Column(db.String(120), unique=True, nullable=False)
-    password = db.Column(db.String(80), unique=False, nullable=False)
-    is_active = db.Column(db.Boolean(), unique=False, nullable=False)
+    name = db.Column(db.String(120), unique=True, nullable=False)
+    uuid = db.Column(db.Integer,  default=lambda: uuid.uuid4().int >> (128 - 32), unique=True)
+
 
     def __repr__(self):
-        return f'<User {self.email}>'
+        return f'<Users {self.name}>'
 
     def serialize(self):
         return {
             "id": self.id,
-            "email": self.email,
+            "name": self.name,
             # do not serialize the password, its a security breach
         }
 class Room(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     Name = db.Column(db.String(120), unique=True, nullable=False)
-    Room_pin = db.Column(db.String(80), unique=False, nullable=True)
-    Host=db.Column(db.String(120), db.ForeignKey("Host.Name"), nullable=False)
+    uuid = db.Column(db.Integer,  default=lambda: uuid.uuid4().int >> (128 - 14), unique=True)
 
 
     def __repr__(self):
@@ -30,15 +29,13 @@ class Room(db.Model):
     def serialize(self):
         return {
             "id": self.id,
-            "Name": self.Name,
-            "Room_pin": self.Room_pin,
-            "Host":self.Host
-        }
+            "Name": self.Name
+            }
 
 class Host(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     Name = db.Column(db.String(120), unique=True, nullable=False)
-    Host_rooms = db.Relationship("Room",backref="Host",lazy=True)
+    # Host_rooms = db.relationship("Room",backref="Host",lazy=True)
 
 
     def __repr__(self):
@@ -47,8 +44,7 @@ class Host(db.Model):
     def serialize(self):
         return {
             "id": self.id,
-            "Name": self.Name,
-            "Host_rooms": self.Host.rooms,
+            "Name": self.Name
 
             # do not serialize the password, its a security breach
         }

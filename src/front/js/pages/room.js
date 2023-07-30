@@ -8,6 +8,15 @@ export default function Guest() {
           Quietly Leave
         </a>
       </div>
+      {/* if(
+        store.token !=null
+      ){
+        Welcome, {
+        store.name
+        }, else {
+          "Welcome!"
+        }
+      } */}
       <h1>Welcome, Person_id!</h1>
       <div class="row justify-content-center d-flex">
         <div class="col">
@@ -71,7 +80,7 @@ export default function Guest() {
         <div class="col-4">
           <div class="Room">
             <h2>Room Name</h2>
-            <h2> # of People In Room</h2>
+            <h2> 3 People In Room</h2>
             <p class="solid">OVYED Deno | Tiktok/IG/Twitter</p>
             <p class="solid">Future</p>
             <p class="solid">NBA YoungBoy</p>

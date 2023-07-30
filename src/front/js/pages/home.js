@@ -1,6 +1,7 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Context } from "../store/appContext";
 import "../../styles/home.css";
+
 
 export const Home = () => {
   const { store, actions } = useContext(Context);
@@ -92,8 +93,9 @@ export const Home = () => {
                         type="button"
                         class="btn btn-secondary"
                         data-bs-dismiss="modal"
+                        // onClick={store.name=input}
                       >
-                        Close
+                        Submit
                       </button>
                     </div>
                   </div>
