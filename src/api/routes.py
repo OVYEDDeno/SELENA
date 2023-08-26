@@ -2,7 +2,7 @@
 This module takes care of starting the API Server, Loading the DB and Adding the endpoints
 """
 from flask import Flask, request, jsonify, url_for, Blueprint
-from api.models import db, Host, Room
+from api.models import db, Room, Users
 from api.utils import generate_sitemap, APIException
 
 api = Blueprint('api', __name__)
@@ -50,3 +50,9 @@ def all_hosts():
 
     return jsonify(all_hosts), 200
 
+@api.route('/user', methods=['GET'])
+def all_users():
+    query_user=Users.query.all()
+    all_users = list(map(lambda x: x.serialize(), query_user))
+
+    return jsonify(all_users), 200

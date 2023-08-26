@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function rewards() {
+export const rewards=()=> {
   return (
     <div>rewards</div>
   )

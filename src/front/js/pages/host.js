@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 
-export default function Host() {
+export const Host=()=> {
 
   return (
     <div className="mt-5">

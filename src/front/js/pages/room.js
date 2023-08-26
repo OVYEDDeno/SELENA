@@ -1,6 +1,9 @@
 import React, { useContext } from "react";
+import { Context } from "../store/appContext";
 
-export default function Guest() {
+export const Room=()=> {
+  const { store, actions } = useContext(Context);
+  console.log(store.users,)
   return (
     <div className="mt-5">
       <div class="d-flex justify-content-end">
